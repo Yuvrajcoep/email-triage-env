@@ -1,0 +1,37 @@
+spec_version: 1
+name: email-triage-env
+type: space
+runtime: fastapi
+app: server.app:app
+port: 7860
+
+# Human-readable metadata
+description: >
+  Customer support email triage environment where an AI agent processes a queue
+  of realistic support tickets — classifying urgency/category, routing to the
+  correct team, drafting responses, deciding when to escalate, and resolving tickets.
+  Models the end-to-end workflow of a real-world Tier-1 support operation.
+
+author: "Hackathon Team"
+license: MIT
+tags:
+  - customer-support
+  - email-triage
+  - nlp
+  - real-world
+
+tasks:
+  - name: ticket_classification
+    description: "Classify each ticket's category and urgency level"
+    difficulty: easy
+    max_steps: 15
+
+  - name: ticket_routing
+    description: "Route tickets to correct departments and draft initial responses"
+    difficulty: medium
+    max_steps: 25
+
+  - name: ticket_resolution
+    description: "Handle full ticket lifecycle with multi-step resolution and escalation judgment"
+    difficulty: hard
+    max_steps: 60
