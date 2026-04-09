@@ -1,12 +1,7 @@
 ---
-title: Email Triage Environment
-emoji: 📧
-colorFrom: blue
-colorTo: purple
-sdk: docker
-pinned: false
-tags:
-  - openenv
+Project Title: Email Triage Environment
+🧠 Problem: Email overload → missed important emails
+💡 Solution: AI-powered email triage system
 ---
 
 # Email Triage Environment
