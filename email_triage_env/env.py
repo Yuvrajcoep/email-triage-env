@@ -208,8 +208,10 @@ class EmailTriageEnv:
 
     def _compute_episode_score(self) -> float:
         if not self._ticket_scores:
-            return 0.0
-        return round(sum(self._ticket_scores) / len(self._ticket_scores), 4)
+            return 0.01
+        raw = sum(self._ticket_scores) / len(self._ticket_scores)
+        # Scores must be strictly within (0, 1)
+        return max(0.01, min(0.99, round(raw, 4)))
 
     def _process_action(
         self, action: Action, ticket_data: Dict
